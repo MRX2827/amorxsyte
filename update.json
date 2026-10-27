@@ -4,29 +4,29 @@
   "notes": " Переходите на официальный сайт https://mrx2827.github.io/amorxsyte/  Что нового : \n• добавлена анимация вкладки ( найти людей ) теперь оно открывается как плеер мягко и прикольно",
   "apk": {
     "arm64-v8a": {
-      "url": "https://github.com/mrx2827/amorxsyte/releases/download/v5.5.499.1302/AmorX-5.5.499.1302-githubRelease-arm64-v8a.apk",
-      "size": 24793977,
-      "sha256": "d76a31a8d281fa933b5dc4456a27368e42d5ce22d1570518699f33f9a998ca2e"
+      "url": "https://github.com/mrx2827/amorxsyte/releases/download/5.5.499.1306/AmorX-5.5.499.1306-githubRelease-arm64-v8a.apk",
+      "size": 24675445,
+      "sha256": "0d42cc2e5a0c1fcc5ae82fa5f2883f3d130b4e7d56a7cd10ddb207e63509856f"
     },
     "armeabi-v7a": {
-      "url": "https://github.com/mrx2827/amorxsyte/releases/download/v5.5.499.1302/AmorX-5.5.499.1302-githubRelease-armeabi-v7a.apk",
-      "size": 24248471,
-      "sha256": "c1193f5adf5fdc3a5b7724d611a3b178406e1c0f30ff3702810b87217bbf49e1"
+      "url": "https://github.com/mrx2827/amorxsyte/releases/download/5.5.499.1306/AmorX-5.5.499.1306-githubRelease-armeabi-v7a.apk",
+      "size": 24129939,
+      "sha256": "babfe3e89ad543d547225bb9e99f089cd77158067229135d7ab0a99305b59921"
     },
     "x86": {
-      "url": "https://github.com/mrx2827/amorxsyte/releases/download/v5.5.499.1302/AmorX-5.5.499.1302-githubRelease-x86.apk",
-      "size": 24750495,
-      "sha256": "a3c084bb10e9ecbb15d6da28d28ad483beebba9eb19b6bda60364acbe65e4e38"
+      "url": "https://github.com/mrx2827/amorxsyte/releases/download/5.5.499.1306/AmorX-5.5.499.1306-githubRelease-x86.apk",
+      "size": 24631963,
+      "sha256": "f94bc81ea0b571e1045096e1bfba2dc1d7637b7e2de793705ec6a6f2c67c0f47"
     },
     "x86_64": {
-      "url": "https://github.com/mrx2827/amorxsyte/releases/download/v5.5.499.1302/AmorX-5.5.499.1302-githubRelease-x86_64.apk",
-      "size": 24888424,
-      "sha256": "55621b014c20f785708b1ca9655886762f9d77148f35f1d5fde0393e9601cecb"
+      "url": "https://github.com/mrx2827/amorxsyte/releases/download/5.5.499.1306/AmorX-5.5.499.1306-githubRelease-x86_64.apk",
+      "size": 24769892,
+      "sha256": "7d31cb3eeea08dbbfeaa1f2cd9cf20ee1a2402af8efeebea885ff27333078b75"
     },
     "universal": {
-      "url": "https://github.com/mrx2827/amorxsyte/releases/download/v5.5.499.1302/AmorX-5.5.499.1302-githubRelease.apk",
-      "size": 32556829,
-      "sha256": "37888e364f959d6a4c12f3c862a52e372e430ac5840b12252f00dc738b218f88"
+      "url": "https://github.com/mrx2827/amorxsyte/releases/download/5.5.499.1306/AmorX-5.5.499.1306-githubRelease.apk",
+      "size": 32438297,
+      "sha256": "88cf56e0dcf2725f5a3942bfeb4f9a59d0c29459d9b5bb6fa732ee9c03fc9231"
     }
   }
 }
