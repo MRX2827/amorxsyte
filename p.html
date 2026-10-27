@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Плейлист AmorX</title>
+<meta name="theme-color" content="#050506">
+<style>
+  :root { color-scheme: dark; --bg:#050506; --card:#111216; --line:#22242b; --text:#e8eaee; --muted:#8b8f9a; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; padding-top: max(32px, env(safe-area-inset-top)); }
+  .brand { color: var(--muted); font-size: 14px; letter-spacing: .04em; margin-bottom: 20px; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-size: 30px; line-height: 1.15; margin: 0 0 6px; word-break: break-word; }
+  .sub { color: var(--muted); margin-bottom: 20px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  .btn { appearance: none; border: 0; border-radius: 999px; padding: 13px 22px; font-size: 16px; font-weight: 600;
+    cursor: pointer; text-decoration: none; display: inline-block; }
+  .btn.main { background: #e8eaee; color: #0b0b0d; }
+  .btn.alt { background: var(--card); color: var(--text); border: 1px solid var(--line); }
+  .list { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--line); }
+  .row:first-child { border-top: 0; }
+  .art { width: 48px; height: 48px; border-radius: 10px; background: #1b1d24; flex: none; object-fit: cover; }
+  .meta { min-width: 0; flex: 1; }
+  .t { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .a { color: var(--muted); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .d { color: var(--muted); font-size: 13px; flex: none; }
+  .msg { color: var(--muted); padding: 28px 0; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 20px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><a href="./">AmorX</a></div>
+  <div id="app"><div class="msg">Загружаем плейлист…</div></div>
+</div>
+<script>
+(function () {
+  var SUPABASE_URL = "https://nxnshkyvpsvckwxquqxm.supabase.co";
+  var SUPABASE_KEY = "sb_publishable_tBZRKUt1QsjbfAjXGtkPSA_39rbXY61";
+  var app = document.getElementById("app");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function dur(ms) {
+    var s = Math.round((ms || 0) / 1000);
+    if (!s) return "";
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+  function plural(n) {
+    var m = n % 100, k = n % 10;
+    if (m >= 11 && m <= 14) return "песен";
+    if (k === 1) return "песня";
+    if (k >= 2 && k <= 4) return "песни";
+    return "песен";
+  }
+  function getCode() {
+    var h = decodeURIComponent(location.hash || "");
+    var m = h.match(/playlist\/([0-9a-fA-F]{8})/) || h.match(/^#?([0-9a-fA-F]{8})$/);
+    return m ? m[1].toLowerCase() : null;
+  }
+  function msg(text) { app.innerHTML = '<div class="msg">' + esc(text) + "</div>"; }
+
+  function render(code, data) {
+    var tracks = Array.isArray(data.tracks) ? data.tracks : [];
+    var rows = tracks.map(function (t) {
+      var art = t.art ? '<img class="art" loading="lazy" referrerpolicy="no-referrer" src="' + esc(t.art) + '" alt="">'
+                      : '<div class="art"></div>';
+      return '<div class="row">' + art +
+        '<div class="meta"><div class="t">' + esc(t.title) + '</div><div class="a">' + esc(t.artist) + "</div></div>" +
+        '<div class="d">' + esc(dur(t.dur)) + "</div></div>";
+    }).join("");
+    app.innerHTML =
+      "<h1>" + esc(data.title || "Плейлист AmorX") + "</h1>" +
+      '<div class="sub">' + tracks.length + " " + plural(tracks.length) + "</div>" +
+      '<div class="actions">' +
+        '<a class="btn main" id="open" href="amorx://playlist/' + code + '">Открыть в AmorX</a>' +
+        '<button class="btn alt" id="copy" type="button">Скопировать ссылку</button>' +
+        '<a class="btn alt" href="./#download">Скачать AmorX</a>' +
+      "</div>" +
+      '<div class="list">' + (rows || '<div class="row"><div class="meta"><div class="a">В плейлисте пока нет песен</div></div></div>') + "</div>" +
+      '<div class="note">Если приложение не открылось, скопируйте ссылку, откройте в AmorX «Вставить ссылку на плейлист» и вставьте её.</div>';
+    document.title = (data.title || "Плейлист AmorX") + " — AmorX";
+    var copy = document.getElementById("copy");
+    copy.addEventListener("click", function () {
+      var link = location.href;
+      var done = function () { copy.textContent = "Скопировано"; setTimeout(function () { copy.textContent = "Скопировать ссылку"; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, done);
+      else done();
+    });
+  }
+
+  function load() {
+    var code = getCode();
+    if (!code) { msg("В ссылке нет кода плейлиста."); return; }
+    fetch(SUPABASE_URL + "/rest/v1/rpc/get_shared_playlist", {
+      method: "POST",
+      headers: { "apikey": SUPABASE_KEY, "Content-Type": "application/json" },
+      body: JSON.stringify({ p_code: code })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }).then(function (rows) {
+      if (!rows || !rows.length) { msg("Плейлист по этой ссылке не найден."); return; }
+      render(code, rows[0]);
+    }).catch(function () { msg("Не удалось загрузить плейлист. Проверьте интернет и попробуйте ещё раз."); });
+  }
+
+  window.addEventListener("hashchange", load);
+  load();
+})();
+</script>
+</body>
+</html>
