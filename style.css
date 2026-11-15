@@ -105,7 +105,6 @@ h1 span { color: #bd9df9; }
 .purple { background: #ceb2ff; } .pink { background: #ffb8df; } .blue { background: #b2c8ff; }
 .feature h3, .install-card h3 { line-height: 1.25; font-size: 19px; letter-spacing: -.022em; margin-bottom: 7px; }
 .feature p, .install-card p { margin: 0; font-size: 14px; color: var(--muted); }
-.install-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .install-card a { color: #e5d1ff; }
 .notes { padding: 0; margin: 0; display: grid; gap: 8px; list-style: none; }
 .notes li { padding: 11px 15px; border-left: 2px solid #a989dc; border-radius: 0 12px 12px 0; background: #ffffff08; color: #e2d8ed; }

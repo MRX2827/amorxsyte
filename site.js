@@ -9,12 +9,12 @@ async function readRelease(file) {
   return response.json();
 }
 
-function releaseURL(value, version, suffix) {
+function releaseURL(value, version, suffix, tags = [version, "v" + version]) {
   const address = new URL(value);
   const prefix = "/mrx2827/amorxsyte/releases/download/";
   const path = address.pathname.toLowerCase();
   if (address.origin !== "https://github.com" || address.username || address.password ||
-      ![version, "v" + version].some(tag => path.startsWith(prefix + tag + "/")) ||
+      !tags.some(tag => path.startsWith(prefix + tag + "/")) ||
       !path.endsWith(suffix)) throw new Error("Неизвестная сборка");
   return address.href;
 }
@@ -55,10 +55,22 @@ readRelease("update.json").then(release => {
   find("notes").replaceChildren(item);
 });
 
-readRelease("windows-update.json").then(release => {
-  if (!/^\d+\.\d+\.\d+\.\d+$/.test(release.version)) return;
-  find("dlWin").href = releaseURL(release.exe.url, release.version, "-windows-x64.exe");
-  find("subWin").textContent = [formatSize(release.exe.size), "Windows 10/11 · x64", release.version].filter(Boolean).join(" · ");
+readRelease("desktop-update.json").then(({version, assets}) => {
+  if (!/^\d+\.\d+\.\d+\.\d+$/.test(version)) return;
+  const platforms = [
+    {key: "windows-x64", button: "dlWin", text: "subWin", label: "Windows 10/11 · x64", suffix: "windows-x64.exe"},
+    {key: "macos-intel", button: "dlMac", text: "subMac", label: "MacBook Intel", suffix: "macos-intel.zip"}
+  ];
+  platforms.forEach(({key, button, text, label, suffix}) => {
+    const asset = assets?.[key];
+    if (!asset) return;
+    try {
+      find(button).href = releaseURL(asset.url, version, "/amorx-desktop-" + version + "-" + suffix, ["desktop-" + version]);
+      find(text).textContent = [formatSize(asset.size), label, version].filter(Boolean).join(" · ");
+    } catch {
+      // The initial link points to a verified release.
+    }
+  });
 }).catch(() => {});
 
 const audio = find("preview");

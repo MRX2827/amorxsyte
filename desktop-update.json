@@ -1,0 +1,16 @@
+{
+  "version": "5.5.499.1320",
+  "notes": "На «Главном» появились истории и лента публикаций, лайки, комментарии, подписки и быстрый доступ к сообщениям.",
+  "assets": {
+    "windows-x64": {
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1320/AmorX-Desktop-5.5.499.1320-Windows-x64.exe",
+      "size": 208991744,
+      "sha256": "bf53611d33de50f76e31854e910c481321985df9bb608ece717d0a06394a8f89"
+    },
+    "macos-intel": {
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1320/AmorX-Desktop-5.5.499.1320-macOS-Intel.zip",
+      "size": 187001339,
+      "sha256": "8e6466838646084edbf1937f0db153f35479110a0e74fe1945f31e796f98b709"
+    }
+  }
+}
