@@ -20,6 +20,7 @@
     <a class="brand" href="./" aria-label="AmorX — главная"><img src="assets/amorx.png" alt="" width="38" height="38">AmorX</a>
     <nav aria-label="Навигация">
       <a href="#features">Возможности</a>
+      <a href="#screenshots">Скриншоты</a>
       <a href="#updates">Обновления</a>
     </nav>
     <a class="top-download" href="#download">Скачать <span aria-hidden="true">↓</span></a>
@@ -85,6 +86,30 @@
       </div>
     </section>
 
+    <section class="shell section" id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-heading"><h2 id="screenshots-title">Плеер на Android</h2></div>
+      <div class="screenshots">
+        <article class="screenshot reveal">
+          <a href="assets/android-player.webp" class="screenshot-link" aria-label="Увеличить экран воспроизведения">
+            <img src="assets/android-player.webp" alt="Обложка альбома, кнопка паузы и полоса воспроизведения AmorX" width="768" height="1707" loading="lazy" decoding="async">
+          </a>
+          <div class="screenshot-caption"><h3>Воспроизведение</h3><p>Обложка, перемотка и быстрый доступ к очереди.</p></div>
+        </article>
+        <article class="screenshot reveal">
+          <a href="assets/android-queue.webp" class="screenshot-link" aria-label="Увеличить экран очереди">
+            <img src="assets/android-queue.webp" alt="Открытая очередь песен с обложками и названием текущего трека" width="768" height="1707" loading="lazy" decoding="async">
+          </a>
+          <div class="screenshot-caption"><h3>Очередь</h3><p>Все следующие треки в одном списке.</p></div>
+        </article>
+        <article class="screenshot reveal">
+          <a href="assets/android-equalizer.webp" class="screenshot-link" aria-label="Увеличить экран эквалайзера">
+            <img src="assets/android-equalizer.webp" alt="Панель эквалайзера AmorX с настройками частот" width="768" height="1707" loading="lazy" decoding="async">
+          </a>
+          <div class="screenshot-caption"><h3>Эквалайзер</h3><p>Настройка звука и сохранение предустановок.</p></div>
+        </article>
+      </div>
+    </section>
+
     <section class="shell section install" id="install" aria-labelledby="install-title">
       <div class="section-heading"><h2 id="install-title">Установка</h2></div>
       <div class="install-grid">
@@ -104,11 +129,39 @@
       <ul class="notes" id="notes"><li>Загружаем изменения…</li></ul>
       <div class="more-builds" id="builds" aria-label="Другие сборки Android"></div>
     </section>
+    <section class="shell section" id="help" aria-labelledby="help-title">
+      <div class="section-heading"><h2 id="help-title">Частые вопросы</h2></div>
+      <div class="questions">
+        <details>
+          <summary>Какую сборку Android выбрать?</summary>
+          <p>Основная кнопка скачивает APK для arm64, который подходит большинству современных телефонов. Для других устройств выберите универсальную сборку в разделе обновлений.</p>
+        </details>
+        <details>
+          <summary>Где смотреть истории и публикации друзей?</summary>
+          <p>Откройте «Главное». Истории идут сверху, под ними находятся фото и видео друзей и людей, на которых вы подписаны. Сообщения открываются кнопкой в шапке «Главного».</p>
+        </details>
+        <details>
+          <summary>Как слушать музыку без интернета?</summary>
+          <p>Заранее скачайте треки в AmorX. Их можно открыть в разделе скачанной музыки после отключения интернета.</p>
+        </details>
+        <details>
+          <summary>Как узнать об обновлении?</summary>
+          <p>На Android новая версия появляется в приложении. Windows-сборка проверяет обновления при запуске EXE.</p>
+        </details>
+      </div>
+    </section>
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр скриншота">
+      <div class="lightbox-controls"><button type="button" id="close-lightbox" aria-label="Закрыть скриншот">×</button></div>
+      <img alt="">
+    </dialog>
   </main>
 
   <footer class="shell footer">
     <a class="brand" href="./"><img src="assets/amorx.png" alt="" width="34" height="34">AmorX</a>
-    <a href="https://github.com/MRX2827/amorxsyte/releases">Релизы на GitHub <span aria-hidden="true">↗</span></a>
+    <div class="footer-links">
+      <a href="#help">Справка</a>
+      <a href="https://github.com/MRX2827/amorxsyte/releases">Релизы на GitHub <span aria-hidden="true">↗</span></a>
+    </div>
   </footer>
 </body>
 </html>

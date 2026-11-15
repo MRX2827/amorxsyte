@@ -128,3 +128,21 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
     observer.observe(card);
   });
 }
+
+const lightbox = find("lightbox");
+if (typeof lightbox?.showModal === "function") {
+  const screenshot = lightbox.querySelector("img");
+  find("close-lightbox").addEventListener("click", () => lightbox.close());
+  document.querySelectorAll(".screenshot-link").forEach(link => {
+    link.addEventListener("click", event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      screenshot.src = link.href;
+      screenshot.alt = link.querySelector("img").alt;
+      lightbox.showModal();
+    });
+  });
+  lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) lightbox.close();
+  });
+}
