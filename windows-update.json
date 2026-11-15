@@ -1,0 +1,9 @@
+{
+  "version": "5.5.499.1318",
+  "notes": "Первая версия AmorX для Windows x64. Лента, истории, сообщения и плеер из Android-релиза 5.5.499.1318. При запуске AmorX проверяет наличие новой версии для Windows.",
+  "exe": {
+    "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1318/AmorX-5.5.499.1318-Windows-x64.exe",
+    "size": 32898560,
+    "sha256": "f1b4fc63843b5af735ef19cd219361aacf4aa21ca8ae08d5f76b4241542cafe4"
+  }
+}

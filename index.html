@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#040405">
-<title>AmorX — скачать для Android</title>
-<meta name="description" content="AmorX — музыкальный плеер для Android. Скачайте APK напрямую, обновления приходят в приложении.">
+<title>AmorX — скачать для Android и Windows</title>
+<meta name="description" content="AmorX — музыкальный плеер для Android и Windows. Скачайте APK или EXE с обновлениями в приложении.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050506'/%3E%3Cpath d='M20 46 32 16l12 30M24 38h16' stroke='%23e8eaee' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 :root{--ink:#040405;--graphite:#0f1013;--steel:#8a9099;--silver:#e8eaee;--line:rgba(255,255,255,.09);--bounce:cubic-bezier(.34,1.56,.64,1)}
@@ -37,7 +37,14 @@ h1{font-size:clamp(64px,13vw,132px);line-height:.95;font-weight:800;letter-spaci
 @keyframes sweep{45%,100%{transform:translateX(120%)}}
 .btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 1px 0 #fff inset,0 20px 50px -8px rgba(220,226,235,.6)}
 .btn:active{transform:scale(.95)}
-.btn svg{width:20px;height:20px;animation:nudge 1.8s ease-in-out infinite}
+.btn svg{width:20px;height:20px;flex:none;animation:nudge 1.8s ease-in-out infinite}
+.download-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px}
+.download-option a{padding-inline:24px}
+.btn-win{color:var(--silver);background:linear-gradient(180deg,#22252c,#111216);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.btn-win::after{opacity:.2}
+.btn-win:hover{box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),0 12px 28px -16px rgba(220,226,235,.55)}
+.requirements{max-width:54ch;margin-top:12px;color:var(--steel);font-size:13px}
+.requirements a{color:var(--silver)}
 @keyframes nudge{50%{transform:translateY(3px)}}
 .sub{margin-top:14px;font-size:13px;color:var(--steel);min-height:20px}
 .phone{position:relative;justify-self:center;width:min(270px,70vw);aspect-ratio:9/18.5;border-radius:42px;padding:12px;background:linear-gradient(160deg,#4a4f57,#16171a 40%,#3b3f46);box-shadow:0 40px 90px -20px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1);animation:float 6s ease-in-out infinite}
@@ -94,13 +101,25 @@ a:focus-visible,.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
   <div>
     <div class="pill rv"><span class="dot"></span><span id="pillText">Проверяем последнюю версию</span></div>
     <h1 class="metal rv" style="--d:.08s">AmorX</h1>
-    <p class="lead rv" style="--d:.16s">Музыка без лишнего. Плеер для Android, который работает плавно и обновляется сам.</p>
+    <p class="lead rv" style="--d:.16s">Музыкальный плеер для Android и Windows с историями, лентой и сообщениями.</p>
     <div class="rv" style="--d:.24s" id="download">
-      <a class="btn" id="dl" href="#">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14"/></svg>
-        <span id="dlText">Скачать для Android</span>
-      </a>
-      <p class="sub" id="sub"></p>
+      <div class="download-actions">
+        <div class="download-option">
+          <a class="btn" id="dl" href="https://github.com/MRX2827/amorxsyte/releases/latest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            <span id="dlText">Скачать для Android</span>
+          </a>
+          <p class="sub" id="sub">Android 8.0 и новее</p>
+        </div>
+        <div class="download-option">
+          <a class="btn btn-win" id="dlWin" href="https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1318/AmorX-5.5.499.1318-Windows-x64.exe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            <span>Скачать AmorX для Windows</span>
+          </a>
+          <p class="sub" id="subWin">Windows 10/11 · x64</p>
+        </div>
+      </div>
+      <p class="requirements">На Windows первый запуск загрузит около 1,3 ГБ. Нужна <a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows">аппаратная виртуализация</a>.</p>
     </div>
   </div>
   <div class="phone rv" style="--d:.2s" aria-hidden="true">
@@ -122,12 +141,12 @@ a:focus-visible,.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
     <div class="f rv"><h3>Свой аккаунт</h3><p>Вход по почте и паролю, подтверждение кодом. Пароль и почту можно сменить в профиле.</p></div>
     <div class="f rv" style="--d:.08s"><h3>Профили и сообщения</h3><p>Делитесь музыкой и переписывайтесь, не выходя из плеера.</p></div>
     <div class="f rv"><h3>Плавный интерфейс</h3><p>Пружинные переходы, мягкие нажатия и ничего лишнего на экране.</p></div>
-    <div class="f rv" style="--d:.08s"><h3>Обновления внутри</h3><p>Новая версия появится баннером в приложении и скачается прямо там.</p></div>
+    <div class="f rv" style="--d:.08s"><h3>Обновления внутри</h3><p>AmorX сообщит о новой версии и предложит её скачать.</p></div>
   </div>
 </div></section>
 
 <section><div class="wrap">
-  <h2 class="rv">Установка за минуту</h2>
+  <h2 class="rv">Установка на Android</h2>
   <ol class="steps">
     <li class="rv"><b>Скачайте APK</b><span>Нажмите кнопку выше на телефоне. Файл появится в загрузках.</span></li>
     <li class="rv" style="--d:.1s"><b>Разрешите установку</b><span>Android спросит про установку из браузера. Разрешите её один раз.</span></li>
@@ -137,7 +156,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
 
 <section><div class="wrap news">
   <div class="rv">
-    <h2 style="margin-bottom:10px">Последняя версия</h2>
+    <h2 style="margin-bottom:10px">Последняя версия Android</h2>
     <div class="ver metal" id="ver">...</div>
     <div class="builds" id="builds"></div>
   </div>
@@ -178,6 +197,20 @@ fetch("update.json", {cache: "no-store"}).then(r => r.json()).then(d => {
   $("#ver").textContent = "—";
   $("#notes").innerHTML = "<li>Не удалось загрузить список изменений. Кнопка «Скачать» всё равно откроет последний релиз.</li>";
 });
+
+fetch("windows-update.json", {cache: "no-store"}).then(r => {
+  if (!r.ok) throw new Error("Windows release unavailable");
+  return r.json();
+}).then(release => {
+  if (!/^\d+\.\d+\.\d+\.\d+$/.test(release.version)) return;
+  const asset = new URL(release.exe.url);
+  const name = "AmorX-" + release.version + "-Windows-x64.exe";
+  const prefix = "/MRX2827/amorxsyte/releases/download/";
+  if (asset.origin !== "https://github.com" ||
+      ![prefix + release.version + "/" + name, prefix + "v" + release.version + "/" + name].includes(asset.pathname)) return;
+  $("#dlWin").href = asset.href;
+  $("#subWin").textContent = [fmt(release.exe.size), "Windows 10/11 · x64", release.version].filter(Boolean).join(" · ");
+}).catch(() => {});
 
 $("#dl").addEventListener("click", () => {
   const t = $("#dlText"), old = t.textContent;
