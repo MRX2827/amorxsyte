@@ -1,16 +1,16 @@
 {
-  "version": "5.5.499.1320",
-  "notes": "На «Главном» появились истории и лента публикаций, лайки, комментарии, подписки и быстрый доступ к сообщениям.",
+  "version": "5.5.499.1321",
+  "notes": "Новый интерфейс AmorX Desktop: анимированная «Моя волна», полноэкранный плеер и двухпанельная библиотека с локальными плейлистами.",
   "assets": {
     "windows-x64": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1320/AmorX-Desktop-5.5.499.1320-Windows-x64.exe",
-      "size": 208991744,
-      "sha256": "bf53611d33de50f76e31854e910c481321985df9bb608ece717d0a06394a8f89"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1321/AmorX-Desktop-5.5.499.1321-Windows-x64.exe",
+      "size": 209232384,
+      "sha256": "dfcd7553ca09c7f10d3674d9ebfa5625a359e8dc743bbb8fed18af6b0716ec28"
     },
     "macos-intel": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1320/AmorX-Desktop-5.5.499.1320-macOS-Intel.zip",
-      "size": 187001339,
-      "sha256": "8e6466838646084edbf1937f0db153f35479110a0e74fe1945f31e796f98b709"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1321/AmorX-Desktop-5.5.499.1321-macOS-Intel.zip",
+      "size": 187241740,
+      "sha256": "2830fb1d909d0f09d530fb85a29378ae3f6db41583d5b8beed63ca8653dbaea7"
     }
   }
 }
