@@ -42,6 +42,9 @@ h1 span { color: #bd9df9; }
 .lead { color: var(--muted); max-width: 33ch; margin-top: 18px; font-size: clamp(16px, 1.8vw, 19px); }
 .downloads { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 27px; scroll-margin-top: 24px; }
 .platform { max-width: 100%; }
+.download-note { max-width: 48ch; margin-top: 14px; font-size: 14px; color: var(--muted); }
+.download-note a { color: #e5d1ff; text-underline-offset: 3px; }
+#install-ios { scroll-margin-top: 24px; grid-column: 1 / -1; }
 .download { min-height: 66px; display: flex; align-items: center; gap: 11px; border: 1px solid transparent; border-radius: 19px; text-decoration: none; padding: 11px 14px; font-size: 14px; font-weight: 700; transition: transform .42s var(--spring), box-shadow .26s, background .26s; }
 .download:hover { transform: translateY(-4px) scale(1.025); }
 .download:active { transform: scale(.96); }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#100e16">
-  <meta name="description" content="AmorX — плеер с музыкой, историями, лентой и сообщениями. Скачать для Android, Windows и MacBook Intel.">
+  <meta name="description" content="AmorX — плеер с музыкой, историями, лентой и сообщениями. Скачать для Android, iPhone, Windows и MacBook Intel.">
   <title>AmorX — музыка, истории и сообщения</title>
   <link rel="icon" href="assets/amorx.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,14 @@
               <span>Скачать для Mac<small id="subMac">MacBook Intel · 5.5.499.1325</small></span>
             </a>
           </div>
+          <div class="platform">
+            <a class="download secondary" id="dlIOS" aria-describedby="ios-install-note" href="https://github.com/MRX2827/amorxsyte/releases/download/ios-5.5.499.1327/AmorX-iOS-5.5.499.1327.ipa">
+              <svg class="download-icon" aria-hidden="true" viewBox="0 0 36 36" fill="none"><rect x="10" y="5" width="16" height="26" rx="4" stroke="currentColor" stroke-width="2"/><path d="M15 9h6M17 27h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>Скачать для iPhone<small id="subIOS">iOS 15.0+ · IPA · 5.5.499.1327</small></span>
+            </a>
+          </div>
         </div>
+        <p class="download-note" id="ios-install-note">IPA для iPhone: установка через AltStore, Sideloadly, Scarlet или TrollStore на поддерживаемом устройстве. <a href="#install-ios">Как установить на iPhone</a>.</p>
         <a class="text-link" href="#install">Как установить <span aria-hidden="true">↘</span></a>
       </div>
 
@@ -131,6 +138,10 @@
           <h3>MacBook Intel</h3>
           <p>Распакуйте ZIP и откройте <code>AmorX.app</code>. При первом запуске macOS может запросить подтверждение. <a href="https://support.apple.com/ru-ru/102445">Инструкция Apple</a>.</p>
         </article>
+        <article class="install-card" id="install-ios">
+          <h3>iPhone и iPad · iOS 15.0+</h3>
+          <p>Скачайте IPA и импортируйте её в AltStore, Sideloadly, Scarlet или TrollStore. Файл поставляется без подписи; установщик подписывает его для вашего устройства. TrollInstallerX и TrollRestore устанавливают сам TrollStore, затем откройте AmorX IPA уже в нём. <a href="https://github.com/opa334/TrollStore">Совместимость TrollStore с вашей iOS</a>.</p>
+        </article>
       </div>
     </section>
 
@@ -147,6 +158,15 @@
         <li>Улучшена отзывчивость кнопок плеера. Добавлены обработка ошибок и повторный запуск трека.</li>
       </ul>
       <div class="more-builds"><a class="chip" href="https://github.com/MRX2827/amorxsyte/releases/tag/desktop-5.5.499.1325">Открыть релиз на GitHub</a></div>
+    </section>
+    <section class="shell section updates" id="ios-updates" aria-labelledby="ios-updates-title">
+      <div class="section-heading"><h2 id="ios-updates-title">AmorX для iPhone</h2><p>5.5.499.1327 · iOS 15.0 и новее</p></div>
+      <ul class="notes">
+        <li>Первая IPA-версия для iPhone и iPad с оформлением и фигурными анимациями Android-плеера.</li>
+        <li>Аккаунт AmorX, музыка, истории, лента, сообщения и восстановление плейлиста AmorX.</li>
+        <li>Проверка запуска Release-версии пройдена в симуляторе iPhone 16 с iOS 18.5.</li>
+      </ul>
+      <div class="more-builds"><a class="chip" href="https://github.com/MRX2827/amorxsyte/releases/tag/ios-5.5.499.1327">Релиз IPA на GitHub</a><a class="chip" href="#install-ios">Установка на iPhone</a></div>
     </section>
     <section class="shell section" id="help" aria-labelledby="help-title">
       <div class="section-heading"><h2 id="help-title">Частые вопросы</h2></div>
@@ -166,6 +186,10 @@
         <details>
           <summary>Как узнать об обновлении?</summary>
           <p>На Android, Windows и MacBook Intel AmorX проверяет обновления при запуске и предлагает скачать новую версию.</p>
+        </details>
+        <details>
+          <summary>Как обновлять AmorX на iPhone?</summary>
+          <p>Скачайте новую IPA с этой страницы и установите поверх текущей версии тем же способом подписи. Для сохранения аккаунта и скачанных файлов используйте тот же идентификатор приложения и подпись и не удаляйте AmorX перед обновлением.</p>
         </details>
         <details>
           <summary>Как перейти со старого Windows EXE?</summary>

@@ -73,6 +73,12 @@ readRelease("desktop-update.json").then(({version, assets}) => {
   });
 }).catch(() => {});
 
+readRelease("ios-update.json").then(({version, ipa}) => {
+  if (!/^\d+\.\d+\.\d+\.\d+$/.test(version) || !ipa) return;
+  find("dlIOS").href = releaseURL(ipa.url, version, "/amorx-ios-" + version + ".ipa", ["ios-" + version]);
+  find("subIOS").textContent = [formatSize(ipa.size), "iOS 15.0+", "IPA", version].filter(Boolean).join(" · ");
+}).catch(() => {});
+
 const audio = find("preview");
 const play = find("play");
 const seek = find("seek");
