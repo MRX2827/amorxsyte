@@ -1,16 +1,16 @@
 {
-  "version": "5.5.499.1322",
-  "notes": "Исправлена синхронизация профиля. После входа AmorX загружает имя, аватар и описание из облака по ID аккаунта.",
+  "version": "5.5.499.1323",
+  "notes": "Отдельные разделы «Скачанное» и «Плейлисты». Восстановление музыки аккаунта с выбором песен, прогрессом загрузки и повтором ошибок.",
   "assets": {
     "windows-x64": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1322/AmorX-Desktop-5.5.499.1322-Windows-x64.exe",
-      "size": 209264128,
-      "sha256": "e1e3ee263e74c13c489000a16b4a86dc1da73c507fb8f6effe1aa7b125c555fb"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1323/AmorX-Desktop-5.5.499.1323-Windows-x64.exe",
+      "size": 209378816,
+      "sha256": "f76c716f9921c8975daaff2c9629b97f23b67ed6f8b5f5a2245474588d94748f"
     },
     "macos-intel": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1322/AmorX-Desktop-5.5.499.1322-macOS-Intel.zip",
-      "size": 187274112,
-      "sha256": "6c4659bbddf883fe67441dad3dfabe66f6e7d1e894a6c5b2cd80116aa18799cb"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1323/AmorX-Desktop-5.5.499.1323-macOS-Intel.zip",
+      "size": 187387784,
+      "sha256": "ae9bd561bd02e56fb4808e8989bf8a49453d45824ddb7b46f3388d46dfc9ea79"
     }
   }
 }
