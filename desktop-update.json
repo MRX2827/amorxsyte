@@ -1,16 +1,16 @@
 {
-  "version": "5.5.499.1323",
-  "notes": "Отдельные разделы «Скачанное» и «Плейлисты». Восстановление музыки аккаунта с выбором песен, прогрессом загрузки и повтором ошибок.",
+  "version": "5.5.499.1324",
+  "notes": "Все скачанные треки в плейлист одним действием. Ссылки на плейлисты для друзей. Облачная копия всех скачанных и одного плейлиста AmorX для Android. Восстановление без дубликатов.",
   "assets": {
     "windows-x64": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1323/AmorX-Desktop-5.5.499.1323-Windows-x64.exe",
-      "size": 209378816,
-      "sha256": "f76c716f9921c8975daaff2c9629b97f23b67ed6f8b5f5a2245474588d94748f"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1324/AmorX-Desktop-5.5.499.1324-Windows-x64.exe",
+      "size": 209462272,
+      "sha256": "7360aa07608d5119fbd439385e4ca746c65316debd604fa19df3f77ca1f7d108"
     },
     "macos-intel": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1323/AmorX-Desktop-5.5.499.1323-macOS-Intel.zip",
-      "size": 187387784,
-      "sha256": "ae9bd561bd02e56fb4808e8989bf8a49453d45824ddb7b46f3388d46dfc9ea79"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1324/AmorX-Desktop-5.5.499.1324-macOS-Intel.zip",
+      "size": 187508649,
+      "sha256": "42963e106cffb28a4fb43293d6aee0ad9a32570aa111097d6a85c871cafa44d3"
     }
   }
 }
