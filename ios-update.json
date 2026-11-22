@@ -1,13 +1,13 @@
 {
-  "version": "5.5.499.1327",
-  "build": 1327,
+  "version": "5.5.499.1328",
+  "build": 1328,
   "minimum_ios": "15.0",
   "mandatory": false,
   "signing": "unsigned",
-  "notes": "Первая IPA-версия AmorX для iPhone и iPad. Оформление и анимации Android, аккаунт, музыка, истории, сообщения и восстановление плейлиста AmorX.",
+  "notes": "Адаптация под маленькие экраны и горизонтальный режим с сохранением анимаций. Кэширование аудиоссылок, загрузка частями с проверкой и повтором при ошибках, быстрый предпросмотр фрагмента истории. Проверки запуска, 25 макетов и загрузчика пройдены в симуляторе iOS 18.5.",
   "ipa": {
-    "url": "https://github.com/MRX2827/amorxsyte/releases/download/ios-5.5.499.1327/AmorX-iOS-5.5.499.1327.ipa",
-    "size": 6351242,
-    "sha256": "83b4275aeed7d95248fd7f610aef6ccfb72c973ed1860388e05378aba23d46d6"
+    "url": "https://github.com/MRX2827/amorxsyte/releases/download/ios-5.5.499.1328/AmorX-iOS-5.5.499.1328.ipa",
+    "size": 6436876,
+    "sha256": "e732d67261dba6ef20657fc3dd28e8dd13ed0db57fc4be2b5486debd242b7c4a"
   }
 }
