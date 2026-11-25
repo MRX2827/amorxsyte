@@ -1,16 +1,16 @@
 {
-  "version": "5.5.499.1325",
-  "notes": "Перемешивание без повторов внутри полного круга. Отдельная история переходов «Назад» и «Вперёд». Улучшена отзывчивость управления музыкой, добавлены обработка ошибок запуска и повторное воспроизведение.",
+  "version": "5.5.499.1330",
+  "notes": "Качественные обложки YouTube и YouTube Music вместо маленьких миниатюр. Автоматический выбор доступного HD-размера, запасная исходная ссылка, качественные обложки для оффлайна. Анимации сохранены.",
   "assets": {
     "windows-x64": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1325/AmorX-Desktop-5.5.499.1325-Windows-x64.exe",
-      "size": 209501696,
-      "sha256": "133d739c4ce567f0745d32a558b84cdc2e1c54a22901160ec02c107c6bbaaadf"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1330/AmorX-Desktop-5.5.499.1330-Windows-x64.exe",
+      "size": 209510400,
+      "sha256": "51e80262e9e801e6993f5e99c7b5199272e41ec600cf2ab0624c325896bbc46c"
     },
     "macos-intel": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1325/AmorX-Desktop-5.5.499.1325-macOS-Intel.zip",
-      "size": 187548068,
-      "sha256": "861137020e6272a046f8f65ade6cc7b985a891718b983fe6a83b96c1d138b4a5"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/desktop-5.5.499.1330/AmorX-Desktop-5.5.499.1330-macOS-Intel.zip",
+      "size": 187557012,
+      "sha256": "98070d4b605c53ab8d98ec3d5705368100aeff78965402c85aa83101282e0021"
     }
   }
 }
