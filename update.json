@@ -1,32 +1,32 @@
 {
-  "version": "5.5.499.1339",
+  "version": "5.5.499.1340",
   "mandatory": false,
-  "notes": "- Уточнён подбор временной разметки для разных версий одной песни.\n- Исправлено появление будущих строк и исчезновение текста на проигрышах.\n- Добавлены плавные переходы между строками дизайнерского плеера.\n- Обновление кэша текстов работает для онлайн- и скачанных песен, сохраняя ручные правки.",
+  "notes": "- Текст появляется на 0,6 секунды раньше вокала, переходы между строками стали плавнее.\n- Длинные куплеты подстраиваются по размеру без многоточия; очень длинные можно прокрутить.\n- Усилена реакция музыкального пятна на бас, громкость и частоты.\n- Точная перемотка и фактические окончания вокальных строк сохраняются.",
   "apk": {
     "arm64-v8a": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1339/AmorX-5.5.499.1339-githubRelease-arm64-v8a.apk",
-      "size": 25284135,
-      "sha256": "dc2ff972e60d3448f30c795c13e73017b7869950cd88c99ec877e48908955467"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1340/AmorX-5.5.499.1340-githubRelease-arm64-v8a.apk",
+      "size": 25284143,
+      "sha256": "ba1c81b894d73a884b2a26d5fa188800c359f26b0e0e448d01ef5e51f3a7e254"
     },
     "armeabi-v7a": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1339/AmorX-5.5.499.1339-githubRelease-armeabi-v7a.apk",
-      "size": 24738629,
-      "sha256": "45bcf86dbad1e6d73dcc8b76efd601286dd4c11653535166749165947c7f66c7"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1340/AmorX-5.5.499.1340-githubRelease-armeabi-v7a.apk",
+      "size": 24738637,
+      "sha256": "ca5a5a6c4f79f1ba3399ed2777cbb10872bec36fc31972d2115b77ed8a2dd2f6"
     },
     "x86": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1339/AmorX-5.5.499.1339-githubRelease-x86.apk",
-      "size": 25240653,
-      "sha256": "6a572a7a40be49df0db742d83aaebd5a74b480449abbf1a2dfe98474193c3a1d"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1340/AmorX-5.5.499.1340-githubRelease-x86.apk",
+      "size": 25240661,
+      "sha256": "242b9a1535978c8d8aae80e7ad9f70f1f2af28cdb7f8ab3312885cd873823daa"
     },
     "x86_64": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1339/AmorX-5.5.499.1339-githubRelease-x86_64.apk",
-      "size": 25378582,
-      "sha256": "923b7286ed12a1197fd3257d95397f00aa40fdf81ea034535eeb98d173ebf1f7"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1340/AmorX-5.5.499.1340-githubRelease-x86_64.apk",
+      "size": 25378590,
+      "sha256": "4c966c85fb747574a245c19fe5fc051d6fb26bd8c3c02a645cd77eb7e81e95df"
     },
     "universal": {
-      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1339/AmorX-5.5.499.1339-githubRelease.apk",
-      "size": 33046987,
-      "sha256": "fd0f6b74bda1b9964e1938d73d0e158ae03a5916ea594bdd5c49ffffc3bf7ba4"
+      "url": "https://github.com/MRX2827/amorxsyte/releases/download/5.5.499.1340/AmorX-5.5.499.1340-githubRelease.apk",
+      "size": 33046995,
+      "sha256": "fdbac186293e3892247d7d54682ca26b79e016c751e9a898d2eddec6bdeae899"
     }
   }
 }
